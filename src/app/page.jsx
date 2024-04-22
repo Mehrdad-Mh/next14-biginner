@@ -1,6 +1,7 @@
 const Home = () => {
+
   return <div>
-    homepage
+    صفحه اصلی
     </div>;
 };
 
