@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {};
 
-module.exports = nextConfig
+module.exports = nextConfig;
+
+
+
+// const nextConfig = {
+//     images: {
+//       remotePatterns: [
+//         {
+//           protocol: "https",
+//           hostname : "render.fineartamerica.com",
+//         },
+//       ],
+//     },
+//   };

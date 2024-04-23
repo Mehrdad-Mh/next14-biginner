@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import styles from "./footer.module.css";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <div className={styles.container}>
+    
 
-export default Footer
+      <div className={styles.text}> طراحی و توسعه توسط این مجموعه می باشد </div>
+
+      <div className={styles.logo} >
+        <Image src="/logo2.png" alt="" width={150} height={150}  />
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

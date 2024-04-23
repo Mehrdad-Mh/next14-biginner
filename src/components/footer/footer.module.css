@@ -1,0 +1,13 @@
+.container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    color: gray;
+}
+
+
+.text{
+   font-size: 20px;
+}

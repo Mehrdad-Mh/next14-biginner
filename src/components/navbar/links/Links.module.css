@@ -4,3 +4,45 @@
     gap: 50px;
     font-weight: 900;
 }
+
+.logout{
+    padding: 5px 20px;
+    font-family: "Vazir"!important;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menuBtn,
+.mobileLinks{
+   display: none;
+   
+}
+
+
+
+@media (max-width : 768px){
+    .links{
+        display: none;
+    }
+
+    .mobileLinks{
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 50%;
+        height: calc(100vh - 100px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: all 1s ease-in-out;
+        background-color: var(--bg);
+      
+    }
+
+    .menuBtn{
+        display: block;
+        cursor: pointer;
+        
+    }
+}
