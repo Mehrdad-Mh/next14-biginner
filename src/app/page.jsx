@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import styles from "./home.module.css"
 
@@ -21,7 +22,7 @@ const Home = () => {
               </div>
               <div className={styles.brands}>
 
-                <Image src="/brands.png" alt="" className={styles.brandImg} fill/>
+                <Image src="/brands.png" alt="" className={styles.brandImg} fill />
 
               </div>
             </div>

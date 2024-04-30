@@ -11,3 +11,22 @@
     font-size: 30px;
     font-weight: bold;
 }
+
+
+@media (max-width : 768px){
+    .container{
+        width : 640px
+    }
+}
+
+@media (max-width : 640px){
+    .container{
+        width : 450px
+    }
+}
+
+@media (max-width : 475px){
+    .container{
+        width : 380px
+    }
+}

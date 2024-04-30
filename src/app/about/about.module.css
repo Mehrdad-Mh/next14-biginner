@@ -8,13 +8,13 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 25px;
     /* justify-content: space-between;
     align-items: center ; */
 }
 
 .title{
-    font-size: 54px;
+    font-size: 37px;
 }
 
 .subtitle{
@@ -24,6 +24,7 @@
 .desc{
     font-size: 20px;
     font-weight: 300;
+    text-align: justify; 
 }
 
 .imgContainer{
@@ -53,4 +54,22 @@
 .img{
     object-fit: contain;
 }
+
+
+@media (max-width : 768px){
+    .container{
+        flex-direction: column;
+    }
+    .boxes{
+        flex-direction: column;
+        gap: 50;
+        text-align: center;
+    }
+    .desc{
+        text-align: justify;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
+
 

@@ -1,12 +1,36 @@
 import Image from 'next/image'
-import React from 'react'
 import styles from './contact.module.css'
+import dynamic from 'next/dynamic'
+
+
+// const HydrationTestNoSSR = dynamic(() =>import("@/components/hydrationTest") , {ssr : false});
+
+export const metadata = {
+  title: 'contact page',
+  description: 'Next.js info and the page for contacting us',
+}
 
 const ContactPage = () => {
-  return (
-    <div className={styles.container}>
 
+
+  
+   
+  return (
+
+    <>
+<h1 className={styles.heading}>
+  با ما در تماس باشید
+</h1>
+    <div className={styles.container}>
+         
      <div className={styles.formContainer}>
+
+     {/* <div suppressHydrationWarning >
+      {a}
+     </div> */}
+
+
+     {/* <HydrationTestNoSSR/> */}
        <form action='' className={styles.form}>
 
         <input type='text' placeholder='  نام خود را وارد کنید  ' />
@@ -17,7 +41,7 @@ const ContactPage = () => {
    
         <textarea name="" id="" cols="30" rows="10" placeholder='  پیام خود را وارد نمائید  '></textarea>
 
-        <button type='submit' >  ارسال  </button>
+        <button  >  ارسال  </button>
        </form>
      </div>
 
@@ -27,6 +51,7 @@ const ContactPage = () => {
 
       
     </div>
+    </>
   )
 }
 

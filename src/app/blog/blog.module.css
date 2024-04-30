@@ -1,5 +1,28 @@
 .container{
     display: flex;
-    gap: 20px;
+    flex-direction: row;
     flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 3rem;
+  
+   
+}
+.post{
+    width : 30%;
+}
+
+@media (max-width : 1280px ) {
+
+    .post{
+        width : 45%;
+    }
+}
+
+@media (max-width : 768px ) {
+
+    
+
+    .post{
+        width : 100%;
+    }
 }

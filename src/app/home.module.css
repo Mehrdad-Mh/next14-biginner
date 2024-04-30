@@ -7,15 +7,24 @@ gap: 100px;
 flex: 1;
 display: flex;
 flex-direction: column;
-gap: 10px;
+gap: 50px;
+}
+
+.imgContainer{
+    /* height: 500px; */
+flex: 1;
+position: relative;
 }
 
 .title{
-    font-size: 96px;
+    font-size: 50px;
 }
 
 .desc{
+  
     font-size: 20px;
+    /* margin: 10px 40px; */
+    text-align: justify;
 }
 
 .buttons{
@@ -45,16 +54,70 @@ gap: 10px;
 
 
 .brands{
-    width: 500px;
+    
+    width: 500;
     height: 50px;
-    position: relative;
+    position: a;
     filter: grayscale(1);
+    display: flex;
+    justify-content:center;
+    -webkit-filter: grayscale(1);
+   
 }
 
-.imgContainer{
-    /* height: 500px; */
-flex: 1;
-position: relative;
+/* .brandImg{
+    width: 200px;
+    height: 50px;
+} */
+
+@media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .buttons{
+        justify-content: center;
+    }
+
 }
+
+@media (max-width : 768px) {
+    /* .container{
+        width : 640px
+    } */
+    /* .imgContainer{
+        display: none;
+    } */
+
+    /* .brandImg{
+        width: 200px;
+        height: 50px;
+    } */
+
+    .title{
+        font-size: 32;
+    }
+
+    .brands{
+        width: 100%;
+    }
+
+    .brandImg{
+        right: -41px!important;
+    }
+}
+
+/* @media (max-width : 640px){
+    .container{
+        width : 450px
+    }
+}
+
+@media (max-width : 475px){
+    .container{
+        width : 380px
+    }
+} */
 
 

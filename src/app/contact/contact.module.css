@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 6rem;
 }
 
 .form input,
@@ -49,9 +50,24 @@
     border: none;
     cursor: pointer;
     font-family: "Vazir"!important;
+    text-align: center;
 }
 
 .form input,.form textarea {
     font-family: "Vazir"!important;
     /* font-size: 15px; */
+}
+
+.heading{
+    text-align: center;
+    margin: 1rem auto;
+}
+
+
+@media (max-width : 768px){
+    .container{
+        flex-direction: column;
+    }
+
+    
 }
