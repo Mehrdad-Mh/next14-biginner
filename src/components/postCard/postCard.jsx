@@ -5,11 +5,23 @@ import { getPost } from "@/lib/data"
 
 
 
-const PostCard = async({params}) => {
+export const generateMetadata = async ({ params }) => {
+  const { slug } = params;
 
-  const {slug} = params;
+  const post = await getPost(slug);
+
+  return {
+    title: post.title,
+    description: post.desc,
+  };
+};
+
+
+const PostCard = async({ post }) => {
+
+  // const { slug } = params;
   
-  const post = await getPost(slug)
+  // const post = await getPost(slug)
 
   return (
     <div className={styles.container}>
@@ -20,7 +32,7 @@ const PostCard = async({params}) => {
           <Image src={post.img} alt="" className={styles.img} fill /> 
           </div>}
 
-          <span className={styles.date}>  {post.createdAt.toString()}  </span>
+          <span className={styles.date}>  {post.createdAt.toString().slice(4,16)}  </span>
         </div>
 
         <div className={styles.bottom}>
@@ -28,7 +40,7 @@ const PostCard = async({params}) => {
            {post.title}
           </h1>
           <p className={styles.desc}>
-          {post.body}
+          {post.desc}
           </p>
           <Link className={styles.link} href={`/blog/${post.slug}`} >  اطلاعات بیشتر  </Link>
         </div>

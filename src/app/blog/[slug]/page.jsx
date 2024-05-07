@@ -4,15 +4,18 @@ import styles from "./singlePost.module.css";
 import PostUser from "@/components/postUser/postUser";
 import { getPost } from "@/lib/data";
 
-// const getData = async(slug) => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+const getData = async(slug) => {
 
-//   if(!res){
-//     throw new Error("error in fetching single post")
-//   }
+  // const res = await fetch(`http://localhost:3000/api/blog/${slug}`,{method : "DELETE"});
 
-//   return res.json()
-// }
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`,{next:{revalidate:3600}});
+
+  if(!res){
+    throw new Error("error in fetching single post")
+  }
+
+  return res.json()
+}
 
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
@@ -28,15 +31,17 @@ export const generateMetadata = async ({ params }) => {
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
 
-  // const post = await getData(slug)
+console.log(params);
 
-  const post = await getPost(slug);
+  const post = await getData(slug)
+
+  // const post = await getPost(slug);
 
   console.log(post, "single post content");
 
   return (
     <div className={styles.container}>
-     {/* {post.img && <div className={styles.imgContiner}>
+     {post.img && <div className={styles.imgContiner}>
         <Image
           src={post.img}
           className={styles.img}
@@ -44,7 +49,7 @@ const SinglePostPage = async ({ params }) => {
           width={400}
           height={250}
         />
-      </div>} */}
+      </div>}
 
       <div className={styles.textContainer}>
         <h1 className={styles.title}> {post.title} </h1>

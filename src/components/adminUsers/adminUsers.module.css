@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 20px;
+    width: 500px;
+    height: 490px;
+    overflow-y: scroll;
+  }
+
+.users {
+    margin: 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .userButton{
+    padding: 10px 20px;
+    background-color: rgba(220, 20, 60, 0.593);
+    color: var(--textColor);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: "Vazir";
+  }

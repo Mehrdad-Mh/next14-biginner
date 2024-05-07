@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 300px;
+    background-color: var(--bgSoft);
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    border-radius: 5px;
+    
+}
+

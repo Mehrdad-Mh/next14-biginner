@@ -1,9 +1,17 @@
-import React from 'react'
+
+import RegisterForm from "@/components/registerForm/registerForm"
+import styles from "./register.module.css"
 
 const RegisterPage = () => {
   return (
-    <div>
-      صفحه ثبت نام
+    <div className={styles.container}>
+
+      <div className={styles.wrapper}>
+
+      <RegisterForm/>
+
+      </div>
+    
     </div>
   )
 }
